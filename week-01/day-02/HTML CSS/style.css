@@ -1,0 +1,42 @@
+body {
+    padding: 10%;
+    background-image: url("topography.png");
+    font-family: courier;
+}
+nav {
+    background-color: black;
+    float: right;
+}
+ul {
+    color: magenta;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+}
+
+h1 {
+    font-family: 'Bitter', serif;
+    font-size: 45px;
+}
+
+h2 {
+    font-family: 'Bitter', serif;
+    font-size: 27px;
+}
+#my-title {
+    color: magenta;
+}
+h3 {
+    font-family: 'Bitter', serif;
+    font-size: 33px;
+    text-align: center;
+}
+
+#slash {
+    text-align: center;
+}
+
