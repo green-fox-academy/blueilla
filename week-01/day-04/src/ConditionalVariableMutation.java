@@ -32,7 +32,7 @@ public class ConditionalVariableMutation {
             System.out.println("Run Forrest Run!");
         }
 
-        
+
 
     }
 }
