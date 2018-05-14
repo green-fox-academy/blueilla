@@ -8,8 +8,7 @@ public class GreeterFunction {
 
     }
 
-    public static String greet(String somebody) {
+    public static void greet(String somebody) {
         System.out.println("Greetings dear, " + somebody);
-        return somebody;
     }
 }
