@@ -8,12 +8,12 @@ public class Summing {
     }
 
     public static int sum(int number) {
-        int sum = 0;
+        int result = 0;
         for (int i = 0; i < number; i++) {
-           sum += i;
+           result += i;
 
         }
-        return sum;
+        return result;
     }
 
 }
