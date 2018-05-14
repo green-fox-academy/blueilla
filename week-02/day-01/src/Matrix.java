@@ -2,7 +2,7 @@ public class Matrix {
 
     public static void main(String[] args) {
 
-        int matrixSize = 5;
+        int matrixSize = 12;
 
         int[][] matrix = new int[matrixSize][matrixSize];
 
@@ -10,12 +10,14 @@ public class Matrix {
             for (int j = 0; j < matrixSize; j++) {
                 if (i == j) {
                     matrix[i][j] = 1;
+                    System.out.print(matrix[i][j]);
                 } else {
                     matrix[i][j] = 0;
+                    System.out.print(matrix[i][j]);
 
                 }
 
-            }
+            }  System.out.println();
         }
     }
 }
