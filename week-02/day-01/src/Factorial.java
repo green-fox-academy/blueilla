@@ -1,7 +1,7 @@
 public class Factorial {
 
     public static void main(String[] args) {
-        int mynumber = 3;
+        int mynumber = 6;
         System.out.println(factorio(mynumber));
 
 
