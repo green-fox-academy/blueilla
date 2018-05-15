@@ -4,7 +4,10 @@ public class TakesLonger {
 
         String quote = "Hofstadter's Law: It you expect, even when you take into account Hofstadter's Law.";
 
-        StringBuilder stringb = new StringBuilder("");
+        StringBuilder sb = new StringBuilder("");
+        sb.append("Hofstadter's Law: It ");
+        sb.append("always takes longer than you expect, even when you take into account Hofstadter's Law.");
+        quote = sb.toString();
 
         System.out.println(quote);
     }
