@@ -8,7 +8,7 @@ public class WriteMultipleLines {
 
     public static void main(String[] args) {
         String myPath = "my-file.txt";
-        String myWord = "apple";
+        String myWord = "tralalalala";
         int myNumber = 5;
         appleWriter(myPath, myWord, myNumber);
 
