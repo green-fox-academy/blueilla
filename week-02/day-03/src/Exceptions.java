@@ -11,7 +11,7 @@ public class Exceptions {
             System.out.println(result);
         }
         catch (ArithmeticException e) {
-            System.out.println("Can't divide by zero!");
+            System.out.println("Fail");
         }
     }
 }
