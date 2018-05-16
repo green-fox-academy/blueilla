@@ -4,14 +4,18 @@ public class Exceptions {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int divisor = scanner.nextInt();
+        int myDivisor = scanner.nextInt();
+        int result = 0;
+        divider(myDivisor, result);
+    }
 
+    public static int divider(int divisor, int result) {
         try {
-            int result = 10 / divisor;
+            result = 10 / divisor;
             System.out.println(result);
-        }
-        catch (ArithmeticException e) {
+        } catch (ArithmeticException e) {
             System.out.println("Fail");
-        }
+        } return result;
     }
 }
+
