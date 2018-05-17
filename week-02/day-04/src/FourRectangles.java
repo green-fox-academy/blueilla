@@ -12,7 +12,7 @@ public class FourRectangles {
 
 
 
-        for (int i = 0; i < 4 ; i++) {
+        for (int i = 0; i < 50 ; i++) {
             int r = (int)(Math.random() * 256);
             int g = (int)(Math.random() * 256);
             int b = (int)(Math.random() * 256);
