@@ -11,7 +11,7 @@ public class PurpleSteps3d {
         int startX = 5;
         int startY = 5;
         int squareSize = 10;
-        
+
         for (int i = 0; i < 20 ; i++) {
             purpleSteps(startX, startY, squareSize, graphics);
             startX += squareSize;
