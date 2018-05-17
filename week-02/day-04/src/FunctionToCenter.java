@@ -14,23 +14,25 @@ public class FunctionToCenter {
 
         int x = 0;
         int y = 0;
+        int lineGap = 50;
+        int lineCount = WIDTH / lineGap;
 
-        for (int i = 0; i < 17; i++) {
+        for (int i = 0; i < lineCount; i++) {
             lineDraw(x, y, graphics);
-            x += 20;
+            x += lineGap;
         }
-        for (int i = 0; i < 17 ; i++) {
+        for (int i = 0; i < lineCount ; i++) {
             lineDraw(x, y, graphics);
-            y += 20;
+            y += lineGap;
         }
-        for (int i = 0; i < 17 ; i++) {
+        for (int i = 0; i < lineCount ; i++) {
             lineDraw(x, y, graphics);
             y = HEIGHT;
-            x -= 20;
+            x -= lineGap;
         }
-        for (int i = 0; i < 17; i++) {
+        for (int i = 0; i < lineCount; i++) {
             lineDraw(x, y, graphics);
-            y -= 20;
+            y -= lineGap;
         }
 
     }
@@ -42,8 +44,8 @@ public class FunctionToCenter {
 
 
     // Don't touch the code below
-    static int WIDTH = 320;
-    static int HEIGHT = 320;
+    static int WIDTH = 400;
+    static int HEIGHT = 400;
     public static void main(String[] args) {
         JFrame jFrame = new JFrame("Drawing");
         jFrame.setSize(new Dimension(WIDTH, HEIGHT + 23));
