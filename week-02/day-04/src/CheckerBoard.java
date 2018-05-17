@@ -16,12 +16,10 @@ public class CheckerBoard {
 
             for (int j = 0; j < 8; j++) {
                 drawSquare(x, y, squareSize, graphics);
-
                 if (j % 2 == i % 2) {
                     fillSquare(x, y, squareSize, graphics);
-                } 
+                }
                 x += squareSize;
-
             }
             x = 0;
             y += squareSize;
