@@ -14,8 +14,9 @@ public class FunctionToCenter {
 
         int x = 0;
         int y = 0;
-        int lineGap = 50;
+        int lineGap = 20;
         int lineCount = WIDTH / lineGap;
+        lineCount = Math.round(lineCount);
 
         for (int i = 0; i < lineCount; i++) {
             lineDraw(x, y, graphics);
@@ -25,7 +26,7 @@ public class FunctionToCenter {
             lineDraw(x, y, graphics);
             y += lineGap;
         }
-        for (int i = 0; i < lineCount ; i++) {
+       for (int i = 0; i < lineCount ; i++) {
             lineDraw(x, y, graphics);
             y = HEIGHT;
             x -= lineGap;
