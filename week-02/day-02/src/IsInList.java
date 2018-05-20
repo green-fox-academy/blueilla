@@ -7,8 +7,8 @@ public class IsInList{
 
 
     }
-    public static boolean checkNums(ArrayList numberlist) {
-        if (numberlist.contains(4) && numberlist.contains(8) && numberlist.contains(12) && numberlist.contains(16)) {
+    public static boolean checkNums(ArrayList numberList) {
+        if (numberList.contains(4) && numberList.contains(8) && numberList.contains(12) && numberList.contains(16)) {
             return true;
         } else {return false;
         }
