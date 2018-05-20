@@ -7,15 +7,12 @@ public class ElementFinder{
         int item = 7;
 
     }
-    public static List<Integer> containsSeven(ArrayList numbers) {
-        
-        for (int i = 0; i < numbers.size(); i++) {
-            if (numbers.contains(7)) {
-                System.out.println("Hooray!!");
-
-            } else {
-                System.out.println("Nooooo!!");
-            }
-        } return numbers;
+    public static String containsSeven(ArrayList<Integer> numbers) {
+        if (numbers.contains(7)) {
+            return "Hooraaayyy!!";
+        } else {
+            return "Nooooo!!";
+        }
     }
 }
+
