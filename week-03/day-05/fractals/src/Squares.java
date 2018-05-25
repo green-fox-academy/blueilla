@@ -19,9 +19,11 @@ public class Squares {
     }
 
     public static void drawFourSquares(int x, int y, int size, Graphics graphics) {
-        for (int i = 0; i < 1 ; i++) {
+        for (int i = 0; i < 2 ; i++) {
             graphics.setColor(Color.black);
-            graphics.drawRect(x, WIDTH / 3, WIDTH / 3, HEIGHT / 3);
+            graphics.drawRect(x, y, size, size);
+            x += WIDTH / 3;
+            y -= WIDTH / 3;
 
         }
     }
