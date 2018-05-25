@@ -12,24 +12,25 @@ public class Squares {
         drawSquares(basicX, basicY, HEIGHT, graphics);
     }
     public static void drawSquares(int x, int y, int size, Graphics graphics) {
-        if (size < 10) {
-            return;
-        } else {
-            graphics.setColor(Color.black);
-            graphics.drawLine(x, size / 3, size, size / 3);
-            graphics.drawLine(x, size - size / 3, size, size - size / 3);
-            graphics.drawLine(size / 3, y, size / 3, size);
-            graphics.drawLine(size - size / 3, y, size - size / 3, size);
-            drawSquares(x, size / 3 , size / 3, graphics);
+        graphics.drawRect(x + size / 3, y, size / 3, size / 3);
+        graphics.drawRect(x, y + size / 3, size / 3, size / 3);
+        graphics.drawRect(x + size / 3, y + size / 3 * 2, size / 3, size / 3);
+        graphics.drawRect(x + size / 3 * 2, y + size / 3, size / 3, size / 3);
+        if (size > 15) {
+            drawSquares(x + size / 3, y, size / 3, graphics);
+            drawSquares(x, y + size / 3, size / 3, graphics);
+            drawSquares(x + size / 3, y + size / 3 * 2, size / 3, graphics);
+            drawSquares(x + size / 3 * 2, y+ size / 3, size / 3, graphics);
         }
     }
 
 
 
 
+
     // Don't touch the code below
-    static int WIDTH = 700;
-    static int HEIGHT = 700;
+    static int WIDTH = 800;
+    static int HEIGHT = 800;
 
     public static void main(String[] args) {
         JFrame jFrame = new JFrame("Drawing");
