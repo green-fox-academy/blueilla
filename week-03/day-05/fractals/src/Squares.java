@@ -6,31 +6,30 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class Squares {
     public static void mainDraw(Graphics graphics){
-      int size = WIDTH;
-      int basicX = 0;
-      int basicY = 0;
-      drawSquare(basicX, basicY, size, graphics);
-      drawFourSquares(basicX, WIDTH / 3, HEIGHT / 3, graphics);
 
+        int basicX = 0;
+        int basicY = 0;
+        drawSquares(basicX, basicY, HEIGHT, graphics);
     }
-    public static void drawSquare(int x, int y, int size, Graphics graphics) {
-        graphics.setColor(Color.black);
-        graphics.drawRect(x, y, size, size);
-    }
-
-    public static void drawFourSquares(int x, int y, int size, Graphics graphics) {
-        for (int i = 0; i < 2 ; i++) {
+    public static void drawSquares(int x, int y, int size, Graphics graphics) {
+        if (size < 10) {
+            return;
+        } else {
             graphics.setColor(Color.black);
-            graphics.drawRect(x, y, size, size);
-            x += WIDTH / 3;
-            y -= WIDTH / 3;
-
+            graphics.drawLine(x, size / 3, size, size / 3);
+            graphics.drawLine(x, size - size / 3, size, size - size / 3);
+            graphics.drawLine(size / 3, y, size / 3, size);
+            graphics.drawLine(size - size / 3, y, size - size / 3, size);
+            drawSquares(x, size / 3 , size / 3, graphics);
         }
     }
 
+
+
+
     // Don't touch the code below
-    static int WIDTH = 400;
-    static int HEIGHT = 400;
+    static int WIDTH = 700;
+    static int HEIGHT = 700;
 
     public static void main(String[] args) {
         JFrame jFrame = new JFrame("Drawing");
