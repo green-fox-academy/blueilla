@@ -7,9 +7,10 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 public class Squares {
     public static void mainDraw(Graphics graphics){
 
-        int basicX = 0;
-        int basicY = 0;
-        drawSquares(basicX, basicY, HEIGHT, graphics);
+        int squareX = 0;
+        int squareY = 0;
+
+        drawSquares(squareX, squareY, HEIGHT, graphics);
     }
     public static void drawSquares(int x, int y, int size, Graphics graphics) {
         graphics.drawRect(x + size / 3, y, size / 3, size / 3);
@@ -29,8 +30,8 @@ public class Squares {
 
 
     // Don't touch the code below
-    static int WIDTH = 800;
-    static int HEIGHT = 800;
+    static int WIDTH = 600;
+    static int HEIGHT = 600;
 
     public static void main(String[] args) {
         JFrame jFrame = new JFrame("Drawing");
