@@ -16,19 +16,15 @@ public class Logs {
         try {
             Path filePath = Paths.get("./log.txt");
             List<String> lines = Files.readAllLines(filePath);
-            System.out.println(makeIpList(lines));
+            for (int i = 0; i < lines.size() ; i++) {
+            //    ArrayList<String> =
+
+            }
+
 
         } catch (IOException e) {
             System.out.println("unidentified file path");
         }
     }
-    public static String[] makeIpList(List list) {
-        String[] ipList = new String[list.size()];
-        for (int i = 0; i < list.size(); i++) {
-          String temp = (String)list.get(i);
-            ipList = temp.split("   ");
-
-        } return ipList;
 
     }
-}
