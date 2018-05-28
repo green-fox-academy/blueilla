@@ -9,7 +9,9 @@ public class Student {
 
 
     public String introduce() {
-        return "Hi, I'm " + name + ", a" + age + " year old" + gender + " from" + previousOrganization + " who skipped" + skippedDays + " days from the course already.";
+        return "Hi, I'm " + name + ", a" + age + " year old" + gender +
+                " from" + previousOrganization + " who skipped" + skippedDays
+                + " days from the course already.";
     }
     public String getGoal() {
         return "Be a junior software developer!";
