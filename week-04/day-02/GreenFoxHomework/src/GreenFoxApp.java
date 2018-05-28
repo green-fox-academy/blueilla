@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class GreenFoxApp {
     public static void main(String[] args) {
-        
+
     ArrayList<Person> people = new ArrayList<>();
     ArrayList<Student> students = new ArrayList<>();
     ArrayList<Mentor> mentors = new ArrayList<>();

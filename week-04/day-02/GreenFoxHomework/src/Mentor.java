@@ -5,11 +5,11 @@ public class Mentor {
     String level;
 
 
-    public String introduce() {
-        return "Hi, I'm " + name + ", a" + age + " year old" + gender + level + " mentor.";
+    public void introduce() {
+        System.out.println("Hi, I'm " + name + ", a " + age + " year old " + gender + " " + level + " mentor.");
     }
-    public String getGoal() {
-        return "Educate brilliant junior software developers!";
+    public void getGoal() {
+        System.out.println("Educate brilliant junior software developers!");
     }
     public Mentor(String name, int age, String gender, String level) {
         this.name = name;

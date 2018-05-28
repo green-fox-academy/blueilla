@@ -4,11 +4,11 @@ public class Person {
     String gender;
 
 
-    public String introduce() {
-        return "Hi, I'm " + name + ", a" + age + " year old" + gender + ".";
+    public void introduce() {
+        System.out.println("Hi, I'm " + name + ", a " + age + " year old " + gender + ".");
     }
-    public String getGoal() {
-        return "My goal is, live for the moment!";
+    public void getGoal() {
+        System.out.println("My goal is, live for the moment!");
     }
     public Person(String name, int age, String gender){
         this.name = name;
