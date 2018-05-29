@@ -29,6 +29,5 @@ public class GardenApp {
 
     yellowFlower.flowerNeedsWater();
     purpleTree.treeNeedsWater();
-    
   }
 }

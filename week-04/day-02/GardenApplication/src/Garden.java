@@ -13,20 +13,4 @@ public class Garden {
    this.flowers = flowers;
    this.trees = trees;
  }
-
-  public List getFlowers() {
-    return flowers;
-  }
-
-  public void setFlowers(List flowers) {
-    this.flowers = flowers;
-  }
-
-  public List getTrees() {
-    return trees;
-  }
-
-  public void setTrees(List trees) {
-    this.trees = trees;
-  }
 }

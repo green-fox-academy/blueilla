@@ -11,22 +11,6 @@ public class Tree {
     this.waterAmount = waterAmount;
   }
 
-  public int getWaterAmount() {
-    return waterAmount;
-  }
-
-  public void setWaterAmount(int waterAmount) {
-    this.waterAmount = waterAmount;
-  }
-
-  public String getColor() {
-    return color;
-  }
-
-  public void setColor(String color) {
-    this.color = color;
-  }
-
   public void treeNeedsWater() {
     if (waterAmount < 10) {
       System.out.println("The Tree needs water!");
