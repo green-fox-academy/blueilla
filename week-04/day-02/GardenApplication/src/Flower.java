@@ -28,13 +28,11 @@ public class Flower {
     this.color = color;
   }
 
-  public boolean flowerNeedsWater(int waterAmount) {
+  public void flowerNeedsWater() {
    if (waterAmount < 5) {
      System.out.println("The Flower needs water!");
-     return true;
    } else {
      System.out.println("The Flower does not need water.");
-     return false;
    }
   }
 }
