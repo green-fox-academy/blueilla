@@ -2,6 +2,15 @@ public class Student extends Person {
 
   private String previousOrganization;
   private int skippedDays;
+  private int numberOfDays;
+
+  public int getNumberOfDays() {
+    return numberOfDays;
+  }
+
+  public void setNumberOfDays(int numberOfDays) {
+    this.numberOfDays = numberOfDays;
+  }
 
   public Student(String name, int age, String gender, String previousOrganization) {
     super(name, age, gender);
@@ -27,6 +36,11 @@ public class Student extends Person {
 
   public void setSkippedDays(int skippedDays) {
     this.skippedDays = skippedDays;
+  }
+
+  public int skipDays(int numberOfDays) {
+    skippedDays += numberOfDays;
+    return numberOfDays;
   }
 
   @Override
