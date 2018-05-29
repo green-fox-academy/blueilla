@@ -9,9 +9,6 @@ public class Student extends Person {
   }
 
   public Student() {
-    getName();
-    getAge();
-    getGender();
     previousOrganization = "The School of Life";
     skippedDays = 0;
   }
