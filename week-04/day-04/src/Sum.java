@@ -4,7 +4,7 @@ import java.util.List;
 public class Sum {
 
   public static int getSum(ArrayList<Integer> numbers) {
-    if (numbers.size() == 0) {
+    if ((numbers.size() == 0) || (numbers == null)) {
       return 0;
     }
     int sum = 0;

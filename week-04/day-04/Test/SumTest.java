@@ -35,4 +35,14 @@ public class SumTest {
 
     assertEquals(expectedResult, result);
   }
+
+  @Test
+  public void should_return_0_when_is_null() {
+    ArrayList<Integer> testList = new ArrayList<>();
+    testList = null;
+    int expectedResult = 0;
+    int result = Sum.getSum(testList);
+
+    assertEquals(expectedResult, result);
+  }
 }
