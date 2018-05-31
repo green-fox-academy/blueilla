@@ -2,9 +2,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Sum {
-  
-  public int getSum(ArrayList<Integer> numbers) {
-    if (numbers == null) {
+
+  public static int getSum(ArrayList<Integer> numbers) {
+    if (numbers.size() == 0) {
       return 0;
     }
     int sum = 0;
