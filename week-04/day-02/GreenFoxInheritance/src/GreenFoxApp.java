@@ -17,6 +17,7 @@ public class GreenFoxApp {
     people.add(gandhi);
     Mentor mentor = new Mentor();
     people.add(mentor);
+    Mentor mentor1 = new Mentor();
     Sponsor sponsor = new Sponsor();
     people.add(sponsor);
     Sponsor elon = new Sponsor("Elon Musk", 46, "male", "SpaceX");
@@ -43,6 +44,7 @@ public class GreenFoxApp {
     awesome.addStudent(john);
     awesome.addMentor(mentor);
     awesome.addMentor(gandhi);
+    awesome.addMentor(mentor1);
     awesome.info();
   }
 }
