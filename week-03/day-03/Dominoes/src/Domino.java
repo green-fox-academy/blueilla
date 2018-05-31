@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Domino {
     private final int[] values;
@@ -11,7 +12,8 @@ public class Domino {
         return values;
     }
 
-    @Override
+
+  @Override
     public String toString() {
         return "[" + values[0] + ", " + values[1] + "]";
     }
