@@ -38,8 +38,7 @@ public class SumTest {
 
   @Test
   public void should_return_0_when_is_null() {
-    ArrayList<Integer> testList = new ArrayList<>();
-    testList = null;
+    ArrayList<Integer> testList = new ArrayList<>(null);
     int expectedResult = 0;
     int result = Sum.getSum(testList);
 
