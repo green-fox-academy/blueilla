@@ -1,4 +1,4 @@
-public class Animal {
+abstract class Animal {
 
   String name;
   boolean isHealthy;
