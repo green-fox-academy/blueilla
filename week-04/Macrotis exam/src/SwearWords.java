@@ -14,12 +14,16 @@ public class SwearWords {
 
     ArrayList<String> offensiveWords = new ArrayList<>(Arrays.asList("fuck", "bloody", "cock", "shit", "fucker", "fuckstick", "asshole", "dick", "piss"));
     System.out.println(readFileContent("./content.txt"));
-    System.out.println(familyFriendlizer("content.txt", offensiveWords)); // should print out 17
+    System.out.println(familyFriendlizer("./content.txt", offensiveWords)); // should print out 17
   }
 
   public static int familyFriendlizer(String filePath, ArrayList<String> offensiveWords) {
     int removedWords = 0;
     List<String> fileContent = readFileContent("./content.txt");
+    for (int i = 0; i < fileContent.size(); i++) {
+      fileContent.remove("fuck");
+    }
+    System.out.println(fileContent);
 
 
     return removedWords;
