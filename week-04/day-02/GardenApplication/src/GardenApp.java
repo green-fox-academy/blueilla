@@ -16,19 +16,18 @@ public class GardenApp {
     ArrayList<Tree> trees = new ArrayList<>();
     Garden garden = new Garden(flowers, trees);
 
-    Flower yellowFlower = new Flower("yellow", 4);
+    Flower yellowFlower = new Flower("yellow", "flower", 4);
     flowers.add(yellowFlower);
-    Flower blueFlower = new Flower("blue", 5);
+    Flower blueFlower = new Flower("blue", "flower", 5);
     flowers.add(blueFlower);
 
-    Tree purpleTree = new Tree("purple", 15);
+    Tree purpleTree = new Tree("purple", "tree", 15);
     trees.add(purpleTree);
-    Tree orangeTree = new Tree("orange", 8);
+    Tree orangeTree = new Tree("orange", "tree", 8);
     trees.add(orangeTree);
 
 
-    yellowFlower.flowerNeedsWater();
-    purpleTree.treeNeedsWater();
-    System.out.println(garden);
+    yellowFlower.printStatus();
+    purpleTree.printStatus();
   }
 }

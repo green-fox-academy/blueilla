@@ -10,7 +10,7 @@ public class AnimalShelter {
     animals.add(animal);
     return animals.size();
   }
-  
+
 
   public void addAdopter(String adopterName) {
     adopterNames.add(adopterName);
