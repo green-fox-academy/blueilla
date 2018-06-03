@@ -11,23 +11,23 @@ public class GardenApp {
 
   public static void main(String[] args) {
 
-
-    ArrayList<Flower> flowers = new ArrayList<>();
-    ArrayList<Tree> trees = new ArrayList<>();
-    Garden garden = new Garden(flowers, trees);
+  ArrayList <Plant> plants = new ArrayList<>();
+  Garden garden = new Garden(plants);
 
     Flower yellowFlower = new Flower("yellow", "flower", 4);
-    flowers.add(yellowFlower);
+    plants.add(yellowFlower);
     Flower blueFlower = new Flower("blue", "flower", 5);
-    flowers.add(blueFlower);
+    plants.add(blueFlower);
 
     Tree purpleTree = new Tree("purple", "tree", 15);
-    trees.add(purpleTree);
+    plants.add(purpleTree);
     Tree orangeTree = new Tree("orange", "tree", 8);
-    trees.add(orangeTree);
+    plants.add(orangeTree);
 
 
     yellowFlower.printStatus();
+    blueFlower.printStatus();
     purpleTree.printStatus();
+    orangeTree.printStatus();
   }
 }

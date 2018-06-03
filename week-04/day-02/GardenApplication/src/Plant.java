@@ -4,6 +4,7 @@ public class Plant {
   private String type;
   private int waterLevel;
 
+
   public Plant(String color, String type, int waterLevel) {
     this.color = color;
     this.type = type;
@@ -36,6 +37,7 @@ public class Plant {
   public void setWaterLevel(int waterLevel) {
     this.waterLevel = waterLevel;
   }
+
 
   public void printStatus() {
     if (getWaterLevel() < 10) {
