@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class Garden {
 
@@ -36,12 +35,12 @@ public class Garden {
     this.waterAmount = waterAmount;
   }
 
-  public void watering(int waterAmount, ArrayList<Plant> plants) {
+  /* public void watering(int waterAmount, ArrayList<Plant> plants) {
     System.out.println("Watering with" + waterAmount);
     for (Plant plant : plants) {
 
     }
 
-  }
+  } */
 }
 
