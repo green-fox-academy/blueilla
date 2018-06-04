@@ -5,10 +5,9 @@ public class Plant {
   private int waterLevel;
 
 
-  public Plant(String color, String type, int waterLevel) {
+  public Plant(String color, String type) {
     this.color = color;
     this.type = type;
-    this.waterLevel = waterLevel;
   }
 
   public Plant() {
@@ -40,7 +39,7 @@ public class Plant {
 
 
   public void printStatus() {
-    if (getWaterLevel() < 10) {
+    if (waterLevel < 10) {
       System.out.println("The " + getColor() + " " + getType() + " needs water!");
     } else {
       System.out.println("The " + getColor() + " " + getType() + " does not need water.");

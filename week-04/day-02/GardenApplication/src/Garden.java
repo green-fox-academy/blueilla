@@ -11,7 +11,6 @@ public class Garden {
 
 
   public Garden(ArrayList<Plant> plants, int waterAmount) {
-
     this.plants = plants;
     this.waterAmount = waterAmount;
   }

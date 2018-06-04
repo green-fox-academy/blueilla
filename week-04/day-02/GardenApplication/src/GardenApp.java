@@ -14,9 +14,9 @@ public class GardenApp {
   ArrayList <Plant> plants = new ArrayList<>();
   Garden garden = new Garden(plants);
 
-    Flower yellowFlower = new Flower("yellow", "flower", 9);
+    Flower yellowFlower = new Flower("yellow", "flower");
     plants.add(yellowFlower);
-    Flower blueFlower = new Flower("blue", "flower", 5);
+    Flower blueFlower = new Flower("blue", "flower");
     plants.add(blueFlower);
 
     Tree purpleTree = new Tree("purple", "tree", 15);
@@ -29,6 +29,6 @@ public class GardenApp {
     blueFlower.printStatus();
     purpleTree.printStatus();
     orangeTree.printStatus();
-    System.out.println(plants);
+
   }
 }

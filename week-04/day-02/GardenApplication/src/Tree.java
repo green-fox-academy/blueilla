@@ -3,8 +3,9 @@ public class Tree extends Plant {
   when watering it the tree can only absorb the 40% of the water
   eg. watering with 10 the tree's amount of water should only increase with 4 */
 
-  public Tree(String color, String type, int waterLevel) {
-    super(color, type, waterLevel);
+  public Tree(String color, String type) {
+    super(color, type);
+    setWaterLevel(10);
   }
 
   public Tree() {
