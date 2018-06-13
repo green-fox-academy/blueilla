@@ -12,7 +12,8 @@ public class LogExercise {
     List<String> allLines = readFile(filePath);
     List<String> ipAdresses = getIPaddresses(allLines);
     List<String> uniqueIPaddresses = getUniqueIPaddresses(ipAdresses);
-    System.out.println(uniqueIPaddresses);
+    System.out.println("The unique IP addresses are " + uniqueIPaddresses + ".");
+    System.out.println("The GETS and POSTS ratio is " + getPostRatio("log.txt") + ".");
   }
 
   private static ArrayList<String> getUniqueIPaddresses(List<String> ipAddresses) {
@@ -45,6 +46,26 @@ public class LogExercise {
       System.out.println("Uh-oh, could not read the file!");
     }
     return allLines;
+  }
+
+  public static double getPostRatio(String fileLocation) {
+    List<String> fileContent = readFile(fileLocation);
+    ArrayList<String> getPostList = new ArrayList<>();
+    for (int i = 0; i < fileContent.size(); i++) {
+      String getPostcolumn = fileContent.get(i).split("   ")[2];
+      getPostList.add(getPostcolumn);
+    }
+    double gets = 0.;
+    double posts = 0.;
+
+    for (int i = 0; i < getPostList.size(); i++) {
+      if(getPostList.get(i).startsWith("G")) {
+        gets++;
+      } else {
+        posts++;
+      }
+    }
+    return gets / posts;
   }
 }
 
