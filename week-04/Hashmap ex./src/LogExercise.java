@@ -10,20 +10,14 @@ public class LogExercise {
   public static void main(String[] args) {
     String filePath = "log.txt";
     List<String> allLines = readFile(filePath);
-    System.out.println(getUniqueIPaddresses(allLines));
-
-
+    List<String> ipAdresses = getIPaddresses(allLines);
+    List<String> uniqueIPaddresses = getUniqueIPaddresses(ipAdresses);
+    System.out.println(uniqueIPaddresses);
   }
 
-  private static ArrayList<String> getUniqueIPaddresses(List<String> allLines) {
-    ArrayList<String> ipAddresses = new ArrayList<>();
-
-    for (int i = 0; i < allLines.size(); i++) {
-      String ipAddress = allLines.get(i).split("   ")[1];
-      ipAddresses.add(ipAddress);
-    }
-
+  private static ArrayList<String> getUniqueIPaddresses(List<String> ipAddresses) {
     ArrayList<String> uniqueIPs = new ArrayList<>();
+
     for (int i = 0; i < ipAddresses.size() - 1; i++) {
       if (ipAddresses.get(i) != ipAddresses.get(i + 1)) {
         uniqueIPs.add(ipAddresses.get(i));
@@ -32,9 +26,19 @@ public class LogExercise {
     return uniqueIPs;
   }
 
+  private static ArrayList<String> getIPaddresses(List<String> allLines) {
+    ArrayList<String> ipAddresses = new ArrayList<>();
+
+    for (int i = 0; i < allLines.size(); i++) {
+      String ipAddress = allLines.get(i).split("   ")[1];
+      ipAddresses.add(ipAddress);
+    }
+    return ipAddresses;
+  }
 
   public static List<String> readFile(String fileLocation) {
     List<String> allLines = new ArrayList<>();
+
     try {
       allLines = Files.readAllLines(Paths.get(fileLocation));
     } catch (Exception e) {
@@ -42,7 +46,6 @@ public class LogExercise {
     }
     return allLines;
   }
-
 }
 
 // Read all data from 'log.txt'.
