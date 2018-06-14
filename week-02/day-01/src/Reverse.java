@@ -6,10 +6,10 @@ public class Reverse {
 
     int[] aj = {3, 4, 5, 6, 7};
     System.out.println(reverseOne(aj));
-   
-
   }
+
   public static String  reverseOne(int[] aj) {
+
     for(int i = 0; i < aj.length / 2; i++) {
       int temp = aj[i];
       aj[i] = aj[aj.length - i - 1];
