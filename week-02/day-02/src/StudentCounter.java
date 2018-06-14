@@ -53,13 +53,9 @@ public class StudentCounter{
     for (int i = 0; i < map.size(); i++) {
       candies = (int)map.get(i).get("candies");
       if(candies > 5) {
-        agecounter += (double)map.get(i).get("age");
+        agecounter += (double) map.get(i).get("age");
         System.out.println("The sum age of the people who are poor in candies like: " + agecounter);
-
-
-    }
-
-
+      }
     }
 
     // Display the following things:else if(candies < 5) {
