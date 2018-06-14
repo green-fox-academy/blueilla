@@ -38,7 +38,7 @@ public class GuessMyNumber {
     if (lives > 1) {
       System.out.println("Congratulations. You won!");
     } else {
-      System.out.println("You dead m8. Get rekt");
+      System.out.println("Sorry, you're dead :(");
     }
   }
 }
