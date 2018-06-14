@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class SwapElements {
 
     public static void main(String[] args) {
@@ -7,6 +9,6 @@ public class SwapElements {
         abc[0] = abc[2];
         abc[2] = temp;
 
-        System.out.println(abc[0]);
+        System.out.println(Arrays.toString(abc));
     }
 }
