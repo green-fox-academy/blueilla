@@ -1,56 +1,72 @@
+import java.util.Random;
+
 abstract class Animal {
 
-  String name;
-  boolean isHealthy;
-  int healCost;
+  private String name;
+  private boolean isHealthy;
+  private int healCost;
+  Random random = new Random();
 
+  public Animal() {
+  }
 
-  public Animal(String name, boolean isHealthy) {
+  public Animal(String name, int healCost) {
     this.name = name;
-    this.isHealthy = isHealthy;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public boolean isHealthy() {
-    return isHealthy;
-  }
-
-  public void setHealthy(boolean healthy) {
-    isHealthy = healthy;
-  }
-
-  public int getHealCost() {
-    return healCost;
-  }
-
-  public void setHealCost(int healCost) {
     this.healCost = healCost;
   }
 
   public boolean heal() {
-    return isHealthy;
+    return isHealthy = true;
   }
 
   public boolean isAdoptable() {
     if (isHealthy == true) {
-    } return true;
+    }
+    return true;
   }
 
+  public boolean isHealthy () {
+    return isHealthy;
+  }
+
+  @Override
   public String toString() {
-    if (isHealthy != true){
-    return this.name + " is not healthy " + "(" + this.healCost + "EUR), and not adoptable";
+    if (isHealthy) {
+      return this.name + " is not healthy (" + healCost + "Euro), and not adoptable.";
     } else {
-      return this.name + "is healthy and adoptable.";
+      return this.name + " is healthy and adoptable";
     }
   }
+
+    public String getName () {
+      return name;
+    }
+
+    public void setName (String name){
+      this.name = name;
+    }
+
+    public void setHealthy ( boolean healthy){
+      isHealthy = healthy;
+    }
+
+    public int getHealCost () {
+      return healCost;
+    }
+
+    public void setHealCost ( int healCost){
+      this.healCost = healCost;
+    }
+
+  public Random getRandom() {
+    return random;
+  }
+
+  public void setRandom(Random random) {
+    this.random = random;
+  }
 }
+
 
 
 

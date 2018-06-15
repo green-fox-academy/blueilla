@@ -1,11 +1,16 @@
 public class Parrots extends Animal {
 
-  public Parrots(String name, boolean isHealthy) {
-    super(name, isHealthy);
-    this.healCost = (int)Math.random() * 10 + 4;
+  private int healcostRandom;
+
+  public Parrots() {
+    this("Parrot");
+  }
+
+  public Parrots(String name) {
+    setName(name);
+    setHealCost(random.nextInt(10) + 4);
   }
 }
-
 
 // -  Cat's healing cost should be a random number between 0 and 6
 // -  Dog's healing cost should be a random number between 1 and 8

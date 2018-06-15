@@ -1,27 +1,59 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class AnimalShelter {
-  int budget = 50;
-  ArrayList<Animal> animals = new ArrayList<>();
-  ArrayList<String> adopterNames = new ArrayList<>();
+
+  private int budget = 50;
+  private ArrayList<Animal> animals = new ArrayList<>();
+  private ArrayList<String> adopterNames = new ArrayList<>();
+  Random random = new Random();
 
   public int rescue(Animal animal) {
     animals.add(animal);
     return animals.size();
   }
 
+  public int heal() {
+    for (int i = 0; i < animals.size(); i++) {
+      if(!animals.get(i).isHealthy() && budget > animals.get(i).getHealCost()) {
+        animals.get(i).setHealthy(true);
+        budget = budget - animals.get(i).getHealCost();
+        return 1;
+      }
+    }
+    return 0;
+  }
 
-  public void addAdopter(String adopterName) {
-    adopterNames.add(adopterName);
+  public void addAdopter(String name) {
+    adopterNames.add(name);
+  }
+
+  public void findNewOwner() {
+    if (!animals.isEmpty() && !adopterNames.isEmpty()) {
+      int num = random.nextInt(adopterNames.size());
+      while (!animals.get(num).isAdoptable()) {
+        num = random.nextInt(adopterNames.size());
+      }
+      animals.remove(num);
+      adopterNames.remove(random.nextInt(adopterNames.size()));
+    }
   }
 
   public int earnDonation(int donation) {
     return budget += donation;
   }
 
-
+  @Override
+  public String toString() {
+    String status =  "Budget: " + budget + ", There are " + animals.size() + " animals and " + adopterNames.size() + " potential adopters";
+    for (Animal currentAnimal : animals) {
+      status = status + "\n" + currentAnimal.toString();
+    }
+    return status + "\n";
+  }
 }
+
 
 
 // -  has a `budget`
@@ -31,8 +63,8 @@ public class AnimalShelter {
 //    to the shelter's list and return the size of the list
 //// -  has a method named `heal()` this method heals the first not healthy Animal, if it is possible by budget,
 //    returns the amount of healed animals(0 or 1)
-// -  has a method named `addAdopter(name)` this method takes a string as parameter and save it as a potential new owner
-/// -  has a method named `findNewOwner()` this method pairs a random name with a random adoptable Animal if it is possible
+// -  HAS A METHOD named `addAdopter(name)` this method takes a string as parameter and save it as a potential new owner
+/// -  HAS A METHOD named `findNewOwner()` this method pairs a random name with a random adoptable Animal if it is possible
 //    and remove both of them from the lists
 // -  has a method named `earnDonation(amount)` this method takes a whole number as parameter and increase the shelter's
 //    budget by the parameter's value and returns the current budget
