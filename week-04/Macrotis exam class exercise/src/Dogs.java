@@ -1,7 +1,5 @@
 public class Dogs extends Animal {
 
-  private int healcostRandom;
-
   public Dogs() {
     this("Dog");
   }

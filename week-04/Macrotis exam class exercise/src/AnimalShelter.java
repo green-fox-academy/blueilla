@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 public class AnimalShelter {
@@ -18,7 +17,7 @@ public class AnimalShelter {
     for (int i = 0; i < animals.size(); i++) {
       if(!animals.get(i).isHealthy() && budget > animals.get(i).getHealCost()) {
         animals.get(i).setHealthy(true);
-        budget = budget - animals.get(i).getHealCost();
+        budget -= animals.get(i).getHealCost();
         return 1;
       }
     }

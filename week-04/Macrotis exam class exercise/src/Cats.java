@@ -1,8 +1,4 @@
-import java.util.Random;
-
 public class Cats extends Animal {
-
-  private int healcostRandom;
 
   public Cats() {
     this("Cat");
