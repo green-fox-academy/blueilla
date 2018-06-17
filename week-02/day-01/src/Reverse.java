@@ -4,11 +4,17 @@ public class Reverse {
 
   public static void main(String[] args) {
 
-    int[] aj = {3, 4, 5, 6, 7};
-    System.out.println(reverseOne(aj));
+    int[] aj = {2, 3, 4, 5, 6};
+    System.out.println(getReversedList(aj));
   }
 
-  public static String  reverseOne(int[] aj) {
+  public static String getReversedList(int[] aj) {
+    if (aj == null) {
+      return "its null";
+    }
+    if (aj.length == 0) {
+      return "sorry, its empty";
+    }
 
     for(int i = 0; i < aj.length / 2; i++) {
       int temp = aj[i];
