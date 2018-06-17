@@ -1,6 +1,6 @@
 import java.util.Random;
 
-abstract class Animal {
+public class Animal {
 
   private String name;
   private boolean isHealthy;
@@ -32,7 +32,7 @@ abstract class Animal {
   @Override
   public String toString() {
     if (isHealthy) {
-      return this.name + " is not healthy (" + healCost + "Euro), and not adoptable.";
+      return this.name + " is not healthy (" + healCost + " Euro), and not adoptable.";
     } else {
       return this.name + " is healthy and adoptable";
     }

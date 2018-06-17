@@ -4,7 +4,7 @@ public class AnimalProtection {
 
     AnimalShelter animalShelter = new AnimalShelter();
 
-    animalShelter.rescue(new Cats("Cicu"));
+    animalShelter.rescue(new Cats());
     animalShelter.rescue(new Dogs("Furkesz"));
     animalShelter.rescue(new Parrots());
     System.out.println(animalShelter.toString());
