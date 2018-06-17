@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class Births {
 
- /* public static void main(String[] args) {
+  public static void main(String[] args) {
 
     System.out.println(getMOstYear("./births.csv"));
 
@@ -67,5 +67,5 @@ public class Births {
     List<String> years = getYears(content);
     Map<String, Integer> yearsMap = transformData(years);
     return filterMostYear(yearsMap);
-  } */
+  }
 }
