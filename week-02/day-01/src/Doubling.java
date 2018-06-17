@@ -2,9 +2,8 @@ public class Doubling {
 
     public static void main(String[] args) {
 
-        int baseNum = 543;
+        int baseNum = 55;
         doubling(baseNum);
-        doubling(321);
         System.out.println(doubling(baseNum));
     }
 

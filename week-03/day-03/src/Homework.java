@@ -18,6 +18,6 @@ public class Homework {
     String type4 = "Fig";
     String leafColor4 = "light brown";
     int age4 = 34;
-    String sex4 = "female;"
+    String sex4 = "female";
 
 }
