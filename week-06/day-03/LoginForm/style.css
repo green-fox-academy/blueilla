@@ -1,0 +1,46 @@
+body {
+    background-color: lavender; 
+    margin: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+accountbox {
+    width: 600;
+    height: 600;
+}
+
+form {
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    margin: auto;
+    text-align: center;
+    border-radius: 2px;
+    
+}
+
+span {
+    text-align: left;
+    margin: auto;
+}
+
+label {
+    font-size: 11px;
+    text-align: left;
+}
+input {
+    width: 80%;
+    height: 40px;
+    margin: 15px; 
+    border-radius: 1px; 
+}
+important {
+    border: 1px, solid, blueviolet;
+}
+button {
+    width: 90px;
+    height: 40px;
+    color: white;
+    background-color: black;
+    border-radius: 30px;
+}
