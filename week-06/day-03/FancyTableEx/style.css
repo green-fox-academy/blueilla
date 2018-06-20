@@ -1,23 +1,63 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
 
 body {
     background-color: cadetblue;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400;
+    color: rgb(129, 129, 129);
     text-rendering: optimizeLegibility; 
     text-align: left;  
 }
 
 table {
     background: white;
-    border-radius:3px;
+    border-radius:5px;
     border-collapse: collapse;
     height: 320px;
-    margin: auto;
+    margin: 30px;
     max-width: 600px;
     padding:5px;
     width: 100%;
   }
+
+  th {
+      font-size: 20px;
+      font-weight: lighter;
+      background-color: black;
+      color: #f2f2f2;
+      text-align: left;
+      border-bottom:4px solid #9ea7af;
+      text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  }
+
+  tr {
+      border-bottom: 1px solid #9ea7af;
+      
+      text-indent: 20px;
+      font-weight: lighter;
+      text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  }
+  tr:last-child td:first-child {
+    border-bottom-left-radius:5px;
+  }
+   
+  tr:last-child td:last-child {
+    border-bottom-right-radius:5px;
+  }
+
+  .months {
+      border-right: 1px solid #9ea7af;
+  }
+  .title1 {
+      border-top-left-radius: 5px;
+      border-right: 1px solid #9ea7af;
+  }
+  .title2 {
+    border-top-right-radius: 5px;
+}
+
+  
+
+  tr:nth-child(even) {background-color: #f2f2f2;}
 
   
