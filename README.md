@@ -1,6 +1,6 @@
-[todo app repositor](https://github.com/blueilla/todo-app)
+[todo app repository](https://github.com/blueilla/todo-app)
 
-[wanderer reository](https://github.com/blueilla/wanderer-java)
+[wanderer repository](https://github.com/blueilla/wanderer-java)
 
 [git lesson repository](https://github.com/blueilla/git-lesson-repository)
 
