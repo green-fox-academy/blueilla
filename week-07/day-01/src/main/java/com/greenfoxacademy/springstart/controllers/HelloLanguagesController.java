@@ -22,7 +22,6 @@ public class HelloLanguagesController {
   @RequestMapping("/diffgreeting")
   public String getGreeting (@RequestParam(value="name") String name, Model model) {
     model.addAttribute("name", name);
-    model.addAttribute("loadCounter",loadCounter.incrementAndGet());
     model.addAttribute("randomHello", getRandomHello());
     return "diffgreeting";
   }
