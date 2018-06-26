@@ -10,7 +10,7 @@
     <h2>Nants ingonyama bagithi baba!!!</h2>
     <div th:object="${bankAccount}">
         <p th:text="'Name: ' + *{name}"></p>
-        <p th:text="'Balance: ' + *{balance}"></p>
+        <p th:text="'Balance: ' + *{balance} + '.00 Zebra'"></p>
         <p th:text="'The type of the animal: ' + *{animalType}"></p>
     </div>
 
