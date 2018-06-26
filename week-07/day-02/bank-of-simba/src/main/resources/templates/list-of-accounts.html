@@ -5,11 +5,11 @@
     <link rel="stylesheet" th:href="@{/style.css}" />
     <meta charset="utf-8" />
 </head>
-<body>
+<body style="width: auto">
 <h1>List of the Accounts</h1>
 
-<table style="width: 70%" border="3px">
-    <tr>
+<table style="width: auto" border="3px">
+    <tr style="background-color: lavender">
         <th>Client Name</th>
         <th>Client Balance</th>
         <th>The Type of the Client</th>
@@ -22,7 +22,7 @@
     <p>No accounts in the list</p>
 </div>
 
-    <tr th:unless="${#lists.isEmpty(accounts)}" th:style="${account.king} ? 'color:magenta' : 'color:black'" th:each="account : ${accounts}" th:object="${account}">
+    <tr th:unless="${#lists.isEmpty(accounts)}" th:style="${account.king} ? 'color:salmon' : 'color:black'" th:each="account : ${accounts}" th:object="${account}">
         <td th:text="*{name}"></td>
         <td th:text="${account.balance} + '.00 Zebra'"></td>
         <td th:text="*{animalType}"></td>
