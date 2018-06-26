@@ -7,15 +7,26 @@
 </head>
 <body>
 <h1>List of the Accounts</h1>
-<div th:if="${#lists.isEmpty(accounts)}">
+
+<table style="width: 50%" border="3px">
+    <tr>
+        <th>Client Name</th>
+        <th>Client Balance</th>
+        <th>The Type of the Client</th>
+    </tr>
+
+    <div th:if="${#lists.isEmpty(accounts)}">
     <p>No accounts in the list</p>
 </div>
-<div th:unless="${#lists.isEmpty(accounts)}" th:each="account : ${accounts}" th:object="${account}">
-    <p th:text="'Name: ' + *{name}"></p>
-    <p th:text="'Balance: ' + *{balance}"></p>
-    <p th:text="'Type of the Animal: ' + *{animalType}"></p>
-    
-</div>
+
+    <tr th:unless="${#lists.isEmpty(accounts)}" th:each="account : ${accounts}" th:object="${account}">
+        <td th:text=" *{name}"></td>
+        <td th:text=" *{balance}"></td>
+        <td th:text="*{animalType}"></td>
+    </tr>
+
+    </div>
+</table>
 
 
 </body>
