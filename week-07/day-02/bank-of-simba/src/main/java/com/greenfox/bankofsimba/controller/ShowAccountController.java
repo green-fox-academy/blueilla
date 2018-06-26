@@ -13,4 +13,11 @@ public class ShowAccountController {
   model.addAttribute("bankAccount", new BankAccount("Simba", 2000, "lion"));
   return "show";
   }
+
+  @RequestMapping("/index")
+  public String showHtmlception(Model model) {
+  model.addAttribute("text", "This is an <em>HTML</em> text. <b>Enjoy yourself!</b>");
+  return "index";
+
+  }
 }
