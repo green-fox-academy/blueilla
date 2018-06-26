@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thymeleaf Exercise #</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h1>Simba Bank Application</h1>
+    <div th:object="${bankAccount}">
+    <p th:text="'Name: ' + *{name}"></p>
+    <p th:text="'Balance: ' + *{balance}"></p>
+    <p th:text="'The type of the animal: ' + *{animalType}"></p>
+    </div>
+
+
+</body>
+</html>
