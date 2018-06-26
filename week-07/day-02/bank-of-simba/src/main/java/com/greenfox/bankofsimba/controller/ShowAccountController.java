@@ -38,6 +38,7 @@ public class ShowAccountController {
   public String showBankAccountList(Model model) {
     model.addAttribute("accounts", accounts);
     accounts.add(new BankAccount("Mufasa", 5000, "lion"));
+    accounts.add(new BankAccount("Simba", 7000, "lion"));
     accounts.add(new BankAccount("Zordon", 3000, "lion"));
     accounts.add(new BankAccount("Timon", 1000, "meerkat"));
     accounts.add(new BankAccount("Pumba", 1000, "warthog"));
