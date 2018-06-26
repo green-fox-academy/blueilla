@@ -24,7 +24,7 @@ public class ShowAccountController {
 
   @RequestMapping("/show")
   public String showIndexPage(Model model) {
-  model.addAttribute("bankAccount", new BankAccount("Simba", 2000, "lion"));
+  model.addAttribute("bankAccount", new BankAccount("Simba", 2000, "lion", true, true));
   return "show";
   }
 
@@ -37,12 +37,12 @@ public class ShowAccountController {
   @RequestMapping("/list-of-accounts")
   public String showBankAccountList(Model model) {
     model.addAttribute("accounts", accounts);
-    accounts.add(new BankAccount("Mufasa", 5000, "lion"));
-    accounts.add(new BankAccount("Simba", 7000, "lion"));
-    accounts.add(new BankAccount("Zordon", 3000, "lion"));
-    accounts.add(new BankAccount("Timon", 1000, "meerkat"));
-    accounts.add(new BankAccount("Pumba", 1000, "warthog"));
-    accounts.add(new BankAccount("Nala", 4000, "lion"));
+    accounts.add(new BankAccount("Mufasa", 5000, "lion", true, true));
+    accounts.add(new BankAccount("Simba", 7000, "lion", true, true));
+    accounts.add(new BankAccount("Zordon", 3000, "lion", false, false));
+    accounts.add(new BankAccount("Timon", 1000, "meerkat", false, true));
+    accounts.add(new BankAccount("Pumba", 1000, "warthog", false, false));
+    accounts.add(new BankAccount("Nala", 4000, "lion", false, true));
 
     return "list-of-accounts";
   }

@@ -8,23 +8,29 @@
 <body>
 <h1>List of the Accounts</h1>
 
-<table style="width: 50%" border="3px">
+<table style="width: 70%" border="3px">
     <tr>
         <th>Client Name</th>
         <th>Client Balance</th>
         <th>The Type of the Client</th>
-        <th>The index of the Client</th>
+        <th>The ID of the Client</th>
+        <th>Rank of the Animal</th>
+        <th>Goodness of the Client</th>
     </tr>
 
     <div th:if="${#lists.isEmpty(accounts)}">
     <p>No accounts in the list</p>
 </div>
 
-    <tr th:unless="${#lists.isEmpty(accounts)}" th:each="account : ${accounts}" th:object="${account}">
-        <td th:text=" *{name}"></td>
-        <td th:text=" *{balance}"></td>
+    <tr th:unless="${#lists.isEmpty(accounts)}" th:style="${account.king} ? 'color:magenta' : 'color:black'" th:each="account : ${accounts}" th:object="${account}">
+        <td th:text="*{name}"></td>
+        <td th:text="${account.balance} + '.00 Zebra'"></td>
         <td th:text="*{animalType}"></td>
         <td th:text="${accountStat.index}"></td>
+        <td th:if="${account.king} == true">KING</td>
+        <td th:unless="${account.king} == true" >not a king</td>
+        <td th:if="${account.good} == true">GOOD</td>
+        <td th:unless="${account.good} == true">not so good</td>
     </tr>
 
 </table>
