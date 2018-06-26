@@ -1,10 +1,14 @@
 package com.greenfox.bankofsimba.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BankAccount {
 
   private String name;
   private int balance;
   private String animalType;
+  private List<BankAccount> accounts;
 
   public BankAccount() {
   }
@@ -37,5 +41,13 @@ public class BankAccount {
 
   public void setAnimalType(String animalType) {
     this.animalType = animalType;
+  }
+
+  public List<BankAccount> getAccounts() {
+    return accounts;
+  }
+
+  public void setAccounts(List<BankAccount> accounts) {
+    this.accounts = accounts;
   }
 }
