@@ -13,6 +13,7 @@
         <th>Client Name</th>
         <th>Client Balance</th>
         <th>The Type of the Client</th>
+        <th>The index of the Client</th>
     </tr>
 
     <div th:if="${#lists.isEmpty(accounts)}">
@@ -23,6 +24,7 @@
         <td th:text=" *{name}"></td>
         <td th:text=" *{balance}"></td>
         <td th:text="*{animalType}"></td>
+        <td th:text="${accountStat.index}"></td>
     </tr>
 
     </div>
