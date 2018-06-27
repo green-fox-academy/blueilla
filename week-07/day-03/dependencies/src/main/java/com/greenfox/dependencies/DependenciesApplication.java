@@ -14,7 +14,10 @@ public class DependenciesApplication implements CommandLineRunner {
   Printer printer;
 
   @Autowired
-  MyColor myColor;
+  MyColor redColor;
+
+  @Autowired
+  MyColor greenColor;
 
   public static void main(String[] args) {
     SpringApplication.run(DependenciesApplication.class, args);
@@ -24,7 +27,8 @@ public class DependenciesApplication implements CommandLineRunner {
   @Override
   public void run(String... args) throws Exception {
     printer.log("HELLO");
-    myColor.printColor();
+    redColor.printColor();
+    greenColor.printColor();
 
   }
 }
