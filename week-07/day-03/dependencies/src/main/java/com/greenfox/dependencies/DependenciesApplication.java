@@ -1,5 +1,7 @@
 package com.greenfox.dependencies;
 
+import com.greenfox.dependencies.service.MyColor;
+import com.greenfox.dependencies.service.Printer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -11,6 +13,9 @@ public class DependenciesApplication implements CommandLineRunner {
   @Autowired
   Printer printer;
 
+  @Autowired
+  MyColor myColor;
+
   public static void main(String[] args) {
     SpringApplication.run(DependenciesApplication.class, args);
 
@@ -19,6 +24,7 @@ public class DependenciesApplication implements CommandLineRunner {
   @Override
   public void run(String... args) throws Exception {
     printer.log("HELLO");
+    myColor.printColor();
 
   }
 }
