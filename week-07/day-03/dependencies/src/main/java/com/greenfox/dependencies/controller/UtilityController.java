@@ -27,6 +27,7 @@ public class UtilityController {
   @RequestMapping("useful/email")
   public String showValidateEmail(@RequestParam(value="email") String email, Model model) {
     model.addAttribute("email", utilityService.validateEmail(email));
+    model.addAttribute("path", email);
     return "email";
   }
 }
