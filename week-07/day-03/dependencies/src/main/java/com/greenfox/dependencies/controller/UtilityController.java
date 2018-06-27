@@ -30,4 +30,16 @@ public class UtilityController {
     model.addAttribute("path", email);
     return "email";
   }
+
+  @RequestMapping("useful/encode")
+  public String showEncodedPage(@RequestParam(value="text") String text, @RequestParam(value="number") int number, Model model) {
+    model.addAttribute("text", utilityService.caesar(text, number));
+    return "encode";
+  }
+
+  @RequestMapping("useful/decode")
+  public String showDecodedPage(@RequestParam(value="text") String text, @RequestParam(value="number") int number, Model model) {
+    model.addAttribute("text", utilityService.caesar(text, number));
+    return "decode";
+  }
 }
