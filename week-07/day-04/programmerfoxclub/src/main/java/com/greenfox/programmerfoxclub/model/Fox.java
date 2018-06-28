@@ -18,4 +18,36 @@ public class Fox {
     this.drinks = new ArrayList<>();
     this.tricks = new ArrayList<>();
   }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public ArrayList<String> getFoods() {
+    return foods;
+  }
+
+  public void setFoods(ArrayList<String> foods) {
+    this.foods = foods;
+  }
+
+  public ArrayList<String> getDrinks() {
+    return drinks;
+  }
+
+  public void setDrinks(ArrayList<String> drinks) {
+    this.drinks = drinks;
+  }
+
+  public ArrayList<String> getTricks() {
+    return tricks;
+  }
+
+  public void setTricks(ArrayList<String> tricks) {
+    this.tricks = tricks;
+  }
 }
