@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Programmer Fox Club</title>
+</head>
+<body>
+        <a href="http://localhost:8080/information">Information</a>
+        <br>
+        <img src="greenfox.png" , width="200">
+
+        <p th:text="'This is Mister Fox Currently living on ' +
+       ${foodName} + ' and ' +
+       ${drinkName} + '. He knows ' +
+       ${number} + ' tricks !' "/>
+
+        <p>This is Mister Fox! Currently living on pizza and lemonade. He knows two tricks.</p>
+        <h1>Known Tricks</h1>
+        <ul>
+            <li>write HTML</li>
+            <li>code in Java</li>
+        </ul>
+
+</body>
+</html>
