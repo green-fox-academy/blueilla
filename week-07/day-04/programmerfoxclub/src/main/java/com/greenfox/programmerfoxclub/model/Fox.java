@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class Fox {
 
   private String name;
-  private ArrayList<String> foods;
-  private ArrayList<String> drinks;
+  private String food;
+  private String drink;
   private ArrayList<String> tricks;
 
   public Fox() {
@@ -14,9 +14,9 @@ public class Fox {
 
   public Fox(String name) {
     this.name = name;
-    this.foods = new ArrayList<>();
-    this.drinks = new ArrayList<>();
-    this.tricks = new ArrayList<>();
+    food = "caviar";
+    drink = "champagne";
+    tricks = new ArrayList<>();
   }
 
   public String getName() {
@@ -27,20 +27,20 @@ public class Fox {
     this.name = name;
   }
 
-  public ArrayList<String> getFoods() {
-    return foods;
+  public String getFood() {
+    return food;
   }
 
-  public void setFoods(ArrayList<String> foods) {
-    this.foods = foods;
+  public void setFood(String food) {
+    this.food = food;
   }
 
-  public ArrayList<String> getDrinks() {
-    return drinks;
+  public String getDrink() {
+    return drink;
   }
 
-  public void setDrinks(ArrayList<String> drinks) {
-    this.drinks = drinks;
+  public void setDrink(String drink) {
+    this.drink = drink;
   }
 
   public ArrayList<String> getTricks() {

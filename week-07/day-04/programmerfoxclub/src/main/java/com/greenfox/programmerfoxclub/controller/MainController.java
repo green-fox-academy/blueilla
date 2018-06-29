@@ -16,21 +16,20 @@ public class MainController {
     this.foxService = foxService;
   }
 
-  @GetMapping("")
-  public String showIndexPage(@RequestParam(value = "name", required = false) String username, Model model) {
-    model.addAttribute("username", username);
-    return "index";
+  @GetMapping("/")
+  public String showIndexPage() {
+    return "login";
   }
 
-  @GetMapping("/login")
-  public String showLoginPage(){
-    return "login";
+  @PostMapping("/login")
+  public String showNewFoxPage(@RequestParam(value = "username") String username){
+    foxService.login(username);
+    return "redirect:/login/" + username;
   }
 
   @GetMapping("login/{username}")
   public String showProfilePage(@PathVariable(value = "username")String username, Model model) {
     model.addAttribute("fox", foxService.getFox(username));
-    return "information";
+    return "index";
   }
-
 }

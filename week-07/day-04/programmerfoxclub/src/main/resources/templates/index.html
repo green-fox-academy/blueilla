@@ -8,10 +8,10 @@
     <body>
         <a href="http://localhost:8080/information">Information</a>
         <br>
-        <img src="greenfox.png" width="200">
+        <img src="/images/greenfox.png" width="200">
 
-        <p th:text="'This is ' + ${username} + '! Currently living on ' + ${foodName} + ' and ' +  ${drinkName} +
-        '. He knows ' + ${number} + ' tricks.' "></p>
+        <p th:text="'This is ' + ${fox.name} + '! Currently living on ' + ${fox.food} + ' and ' +  ${fox.drink} +
+        '. He knows ' + ${fox.tricks.size()} + ' tricks.' "></p>
 
         <h1>Known Tricks</h1>
         <ul>
