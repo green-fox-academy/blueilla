@@ -9,9 +9,16 @@
         <a href="http://localhost:8080/information">Information</a>
         <br>
         <img src="/images/greenfox.png" width="200">
+=
+        <p th:text="'This is ' + ${fox.name} + '. Currenly living on ' + ${fox.food} + ' and ' + ${fox.drink} + '.'"></p>
 
-        <p th:text="'This is ' + ${fox.name} + '! Currently living on ' + ${fox.food} + ' and ' +  ${fox.drink} +
-        '. He knows ' + ${fox.tricks.size()} + ' tricks.' "></p>
+        <div th:if="${fox.tricks.size()} == 0">
+            <p th:text="'' + ${fox.name} + ' dont know any tricks yet. Go and learn some!'"></p>
+        </div>
+
+        <div th:unless="${fox.tricks.size()} == 0">
+            <p th:text="'' + ${fox.name} + ' knows ' + ${fox.tricks.size()} + 'tricks.'"></p>
+        </div>
 
         <h1>Known Tricks</h1>
         <ul>

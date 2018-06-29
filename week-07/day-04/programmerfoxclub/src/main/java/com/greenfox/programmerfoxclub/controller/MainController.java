@@ -1,5 +1,6 @@
 package com.greenfox.programmerfoxclub.controller;
 
+import com.greenfox.programmerfoxclub.model.Fox;
 import com.greenfox.programmerfoxclub.service.FoxService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
