@@ -23,14 +23,23 @@ public class MainController {
   }
 
   @PostMapping("/login")
-  public String showNewFoxPage(@RequestParam(value = "username") String username){
+  public String showNewFoxPage(@RequestParam(value = "username") String username) {
     foxService.login(username);
     return "redirect:/login/" + username;
   }
 
   @GetMapping("login/{username}")
-  public String showProfilePage(@PathVariable(value = "username")String username, Model model) {
+  public String showProfilePage(@PathVariable(value = "username") String username, Model model) {
     model.addAttribute("fox", foxService.getFox(username));
     return "index";
   }
+
+  @GetMapping("/nutrition-store")
+  public String showNutritionStore() {
+    return "nutrition-store";
+  }
 }
+
+//  @PostMapping("/login")
+//  public String showWithNutritions(@RequestParam(value = ))
+//}
