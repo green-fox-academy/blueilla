@@ -34,8 +34,9 @@ public class MainController {
     return "index";
   }
 
-  @GetMapping("/nutrition-store")
-  public String showNutritionStore() {
+  @GetMapping("login/{username}/nutrition-store")
+  public String showNutritionStore(@PathVariable(value = "username") String username, Model model) {
+    model.addAttribute("fox", foxService.getFox(username));
     return "nutrition-store";
   }
 }

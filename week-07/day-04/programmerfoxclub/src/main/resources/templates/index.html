@@ -6,25 +6,27 @@
         <meta charset="utf-8" />
     </head>
     <body>
-        <a href="http://localhost:8080/information">Information</a>
-        <br>
+
+        <ul id="menu">
+            <a href="http://localhost:8080/information"><li>Information</li></a>
+            <a th:href="@{'/login/' + ${fox.name} + '/nutrition-store'}"><li>Nutrition Store</li></a>
+            <a><li>Trick Center</li></a>
+            <a><li>Action History</li></a>
+        </ul>
+
         <img src="/images/greenfox.png" width="200">
-=
+
         <p th:text="'This is ' + ${fox.name} + '. Currenly living on ' + ${fox.food} + ' and ' + ${fox.drink} + '.'"></p>
 
         <div th:if="${fox.tricks.size()} == 0">
-            <p th:text="'' + ${fox.name} + ' dont know any tricks yet. Go and learn some!'"></p>
+            <h1>Known Tricks</h1>
+            <p th:text="'' + ${fox.name} + ' don\'t know any tricks yet. Go and learn some!'"></p>
         </div>
 
         <div th:unless="${fox.tricks.size()} == 0">
-            <p th:text="'' + ${fox.name} + ' knows ' + ${fox.tricks.size()} + 'tricks.'"></p>
+            <h1>Known Tricks</h1>
+            <p th:text="'' + ${fox.name} + ' knows ' + ${fox.tricks.get(0)} + ' trick(s).'"></p>
         </div>
-
-        <h1>Known Tricks</h1>
-        <ul>
-            <li>write HTML</li>
-            <li>code in Java</li>
-        </ul>
 
     </body>
 </html>
