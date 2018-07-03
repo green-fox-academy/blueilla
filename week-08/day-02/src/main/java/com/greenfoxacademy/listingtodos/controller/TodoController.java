@@ -14,9 +14,6 @@ public class TodoController {
     model.addAttribute("todo");
     return "This is my first todo!";
   }
-
-
-
 }
 
 
