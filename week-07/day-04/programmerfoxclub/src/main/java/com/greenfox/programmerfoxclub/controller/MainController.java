@@ -40,7 +40,3 @@ public class MainController {
     return "nutrition-store";
   }
 }
-
-//  @PostMapping("/login")
-//  public String showWithNutritions(@RequestParam(value = ))
-//}
