@@ -12,7 +12,7 @@ public class TodoController {
   @ResponseBody
   public String list(Model model) {
     model.addAttribute("todo");
-    return ("This is my first todo!");
+    return "This is my first todo!";
   }
 
 
