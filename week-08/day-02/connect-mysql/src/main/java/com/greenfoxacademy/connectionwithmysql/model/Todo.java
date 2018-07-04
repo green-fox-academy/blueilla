@@ -11,7 +11,7 @@ public class Todo {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private long id;
+  private Long id;
   private String title;
   private boolean urgent;
   private boolean done;
@@ -24,8 +24,12 @@ public class Todo {
     done = false;
   }
 
-  public long getId() {
+  public Long getId() {
     return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
   }
 
   public String getTitle() {
