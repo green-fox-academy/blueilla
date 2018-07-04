@@ -14,7 +14,7 @@ public class TodoController {
   @Autowired
   TodoRepository todoRepository;
 
-  @GetMapping(value = {"/", "/list"})
+  @GetMapping(value = {"/", "/todo"})
   public String list(@RequestParam(value = "isActive", required = false) boolean isActive, Model model) {
     if (isActive) {
       model.addAttribute("todos", todoRepository.findByDone(false));
@@ -22,6 +22,11 @@ public class TodoController {
       model.addAttribute("todos", todoRepository.findAll());
     }
     return "todolist";
+  }
+
+  @GetMapping("/todo/add")
+  public String showAddTodoPage() {
+    return "add-todo";
   }
 }
 
