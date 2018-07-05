@@ -10,8 +10,9 @@
         <a href="/todo/add">Add new Todo!</a>
 
         <form th:action="@{/todo}" method="get">
+            <label>Search for an existing Todo!</label>
             <input type="text" placeholder="Search..." name="search">
-            <button type="submit"></button>
+            <button type="submit">search</button>
         </form>
 
         <table border="1", width="500">
