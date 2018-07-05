@@ -1,5 +1,6 @@
 package controller;
 
+import org.springframework.web.bind.annotation.ModelAttribute;
 import service.UserService;
 import com.greenfox.error.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,14 +22,15 @@ public class AppController {
 
     @GetMapping("/")
     public String index(Model model) {
-        model.addAttribute("new_user", new User());
+        model.addAttribute("user", new User());
         model.addAttribute("yolo", service.getAll());
-        return "index";
+        return "main";
     }
 
     @PostMapping("/app")
-    public String create() {
-        service.save(new User());
+    public String create(@ModelAttribute User user) {
+        service.save(user);
         return "redirect:/";
     }
+
 }
