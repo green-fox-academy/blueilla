@@ -9,10 +9,15 @@
 <h1>User Database</h1>
 <h2>Add a new User</h2>
 <form action="#" th:action="@{/app}" th:object="${user}" method="post">
-    <p>First Name: <input type="text" th:field="*{firstName}" /></p>
-    <p>Last Name: <input type="text" th:field="*{lastName}" /></p>
-    <p><input type="submit" value="Submit" /></p>
+
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" th:field="*{firstName}"/>
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" th:field="*{lastName}"/>
+    <input type="submit" value="Submit" />
 </form>
+
+
 <h2>Existing users</h2>
 <table>
     <tr>
@@ -20,8 +25,8 @@
         <th>Last name</th>
     </tr>
     <tr th:each="swag : ${yolo}">
-        <td th:text="${swag.firstName}">Lacika</td>
-        <td th:text="${swag.lastName}">Kovács</td>
+        <td th:text="${swag.firstName}"></td>
+        <td th:text="${swag.lastName}"></td>
     </tr>
 </table>
 </body>
