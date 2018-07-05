@@ -14,17 +14,22 @@
             <button type="submit"></button>
         </form>
 
-        <table border="1", width="300">
+        <table border="1", width="500">
 
             <th>ID</th>
-            <th>Action</th>
+            <th>Something to do</th>
             <th>Done</th>
             <th>Urgent</th>
+            <th>Delete</th>
+            <th>Edit</th>
+
             <tr th:each="todo : ${todos}">
                 <td th:text="${todo.id}"></td>
                 <td th:text="${todo.title}"></td>
                 <td th:text="${todo.done}"></td>
                 <td th:text="${todo.urgent}"></td>
+                <td><a th:href="'/' + ${todo.id} + '/delete'">Delete</a></td>
+                <td><a th:href="'/' + ${todo.id} + '/edit'">Edit</a></td>
             </tr>
 
         </table>
