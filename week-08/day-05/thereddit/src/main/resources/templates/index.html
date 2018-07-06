@@ -9,6 +9,11 @@
         <a href="/submit">Submit a new post here!</a>
 
         <h1>Trending posts</h1>
+
+        <tr th:each="post : ${posts}">
+
+            <a th:href="${post.url}">th:text="${post.text}"</a>
+
         
     </body>
 </html>

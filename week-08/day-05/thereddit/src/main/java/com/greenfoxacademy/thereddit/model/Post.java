@@ -11,13 +11,15 @@ public class Post {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private long id;
-  private String post;
+  private String text;
+  private String url;
 
   public Post() {
   }
 
-  public Post(String post) {
-    this.post = post;
+  public Post(String text, String url) {
+    this.text = text;
+    this.url = url;
   }
 
   public long getId() {
@@ -28,11 +30,19 @@ public class Post {
     this.id = id;
   }
 
-  public String getPost() {
-    return post;
+  public String getText() {
+    return text;
   }
 
-  public void setPost(String post) {
-    this.post = post;
+  public void setText(String text) {
+    this.text = text;
+  }
+
+  public String getUrl() {
+    return url;
+  }
+
+  public void setUrl(String url) {
+    this.url = url;
   }
 }

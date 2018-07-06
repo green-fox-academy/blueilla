@@ -2,9 +2,19 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="UTF-8"/>
-        <title>Submit Comments </title>
+        <title>Submit new Post!</title>
     </head>
     <body>
-        
+
+        <h1>Submit new Post</h1>
+        <form th:action="@{/submit}" method="post" th:object="${post}">
+            <label for="text">Add a Post here!</label>
+            <input type="text" id="text" th:field="${post.text}">
+            <label for="url">Add the URL here!</label>
+            <input type="text" id="url" th:field="${post.url}">
+            <input type="submit">
+        </form>
+
     </body>
 </html>
+
