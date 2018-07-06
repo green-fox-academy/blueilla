@@ -13,13 +13,15 @@ public class Post {
   private long id;
   private String text;
   private String url;
+  private int counter;
 
   public Post() {
   }
 
-  public Post(String text, String url) {
+  public Post(String text, String url, int counter) {
     this.text = text;
     this.url = url;
+    this.counter = counter;
   }
 
   public long getId() {
@@ -44,5 +46,13 @@ public class Post {
 
   public void setUrl(String url) {
     this.url = url;
+  }
+
+  public int getCounter() {
+    return counter;
+  }
+
+  public void setCounter(int counter) {
+    this.counter = counter;
   }
 }

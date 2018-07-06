@@ -10,10 +10,15 @@
 
         <h1>Trending posts</h1>
 
+        <table>
+
         <tr th:each="post : ${posts}">
 
-            <a th:href="${post.url}">th:text="${post.text}"</a>
-
+           <td><a th:href="${post.url}">Vote up!</a></td>
+            <td><a th:href="${post.url}">Vote down!</a></td>
+            <td><a th:href="${post.url}"><p th:text="${post.text}"></p></a></td>
+            </tr>
+        </table>
         
     </body>
 </html>

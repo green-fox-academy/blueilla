@@ -16,7 +16,8 @@ public class PostController {
   PostRepository postRepository;
 
   @GetMapping("/")
-  public String renderIndexPage() {
+  public String renderIndexPage(Model model) {
+    model.addAttribute("posts", postRepository.findAll());
     return "index";
   }
 
