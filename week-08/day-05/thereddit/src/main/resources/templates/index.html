@@ -13,9 +13,9 @@
         <table>
 
         <tr th:each="post : ${posts}">
-
-           <td><a th:href="${post.url}">Vote up!</a></td>
-            <td><a th:href="${post.url}">Vote down!</a></td>
+            <td th:text="${post.counter}"></td>
+            <td><a th:href="${post.counter}">+</a></td>
+            <td><a th:href="${post.counter}">-</a></td>
             <td><a th:href="${post.url}"><p th:text="${post.text}"></p></a></td>
             </tr>
         </table>
