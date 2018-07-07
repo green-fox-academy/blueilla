@@ -7,6 +7,7 @@
     <body>
 
         <h1>Submit new Post</h1>
+
         <form th:action="@{/submit}" method="post" th:object="${post}">
             <label for="text">Add a Post here!</label>
             <input type="text" id="text" th:field="${post.text}">

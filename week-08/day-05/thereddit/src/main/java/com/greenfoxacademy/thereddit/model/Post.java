@@ -21,7 +21,7 @@ public class Post {
   public Post(String text, String url) {
     this.text = text;
     this.url = url;
-    counter = 0;
+    counter = 4;
   }
 
   public long getId() {
@@ -54,13 +54,5 @@ public class Post {
 
   public void setCounter(int counter) {
     this.counter = counter;
-  }
-
-  public void upCounter() {
-    counter++;
-  }
-
-  public void downCounter() {
-    counter--;
   }
 }

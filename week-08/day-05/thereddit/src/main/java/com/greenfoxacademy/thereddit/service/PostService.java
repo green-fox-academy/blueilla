@@ -17,11 +17,14 @@ public class PostService {
     postRepository.save(post);
   }
 
-  public Post findPost(long id) {
+  public Post findPostById(long id) {
    return postRepository.findById(id).get();
   }
 
   public List<Post> findAll() {
     return postRepository.findAll();
   }
+
+
+
 }

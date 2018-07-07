@@ -23,10 +23,10 @@ public class PostController {
     return "index";
   }
 
-//  @GetMapping("/{id}/delete")
-//  public String deleteTodo(@PathVariable(value="id") long id ) {
+//  @GetMapping("/{id}/increment")
+//  public String incrementVote(@PathVariable(value="id") long id ) {
 //
-//    return "redirect:/todo";
+//    return "redirect:/";
 //  }
 //
 //  @PostMapping("/")

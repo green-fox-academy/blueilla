@@ -3,22 +3,29 @@
     <head>
         <meta charset="UTF-8"/>
         <title>Main Page</title>
+        <link rel="stylesheet" href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/webjars/bootstrap/3.3.7-1/css/bootstrap-theme.min.css" />
+
+
     </head>
     <body>
-
-        <a href="/submit">Submit a new post here!</a>
-
-        <h1>Trending posts</h1>
-
-        <table>
-
+        <div class="btn btn-default" href="#" role="button">
+        <a href="/submit">Submit your post here!</a>
+        </div>
+        <h1>
+            <em>Trending posts</em>
+        </h1>
+        <br>
+        <table class="table table-hover">
         <tr th:each="post : ${posts}">
             <td th:text="${post.counter}"></td>
-            <td><a th:href="${post.counter}">+</a></td>
-            <td><a th:href="${post.counter}">-</a></td>
+            <td><a type="button" class="btn btn-primary" th:href="${post.counter}">Up!</a></td>
+            <td><a type="button" class="btn btn-warning" th:href="${post.counter}">Down!</a></td>
             <td><a th:href="${post.url}"><p th:text="${post.text}"></p></a></td>
             </tr>
         </table>
-        
+
+        <script src="/webjars/jquery/1.11.1/jquery.min.js"></script>
+        <script src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
     </body>
 </html>
