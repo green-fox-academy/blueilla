@@ -18,7 +18,7 @@ public class PostController {
 
   @GetMapping("/")
   public String renderIndexPage(Model model) {
-    model.addAttribute("posts", postService.findAll());
+    model.addAttribute("posts", postService.descByCounter());
     return "index";
   }
 
@@ -35,14 +35,14 @@ public class PostController {
     return "redirect:/";
   }
 
-  @GetMapping(value = "/{id}/voteup")
+  @GetMapping("/{id}/voteup")
   public String voteUp(@PathVariable(name = "id") Long id) {
     postService.incrementCounterById(id);
     postService.savePost(postService.findPostById(id));
     return "redirect:/";
   }
 
-  @GetMapping(value = "/{id}/votedown")
+  @GetMapping("/{id}/votedown")
   public String voteDown(@PathVariable(name = "id") Long id) {
     postService.decrementCounterById(id);
     postService.savePost(postService.findPostById(id));

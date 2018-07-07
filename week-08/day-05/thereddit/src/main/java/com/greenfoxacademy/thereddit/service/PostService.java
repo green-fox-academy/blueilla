@@ -33,4 +33,8 @@ public class PostService {
     findPostById(id).voteDown();
   }
 
+  public List<Post> descByCounter() {
+    return postRepository.findAllByOrderByCounterDesc();
+  }
+
 }

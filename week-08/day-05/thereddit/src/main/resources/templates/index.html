@@ -12,9 +12,18 @@
         <div class="btn btn-default">
         <a href="/submit">Submit your post here!</a>
         </div>
-        <h1 class="text-center">Trending posts</h1>
+        <h1 class="text-center"><--Welcome to fake~reddit--></h1>
+        <h4 class="text-center">...may the force be with you...</h4>
+
         <br>
+        <div class="">
         <table class="table table-hover">
+            <div class="">
+            <th>score</th>
+            <th>vote UP here!</th>
+            <th>vote Down here!</th>
+            <th>most trending posts here</th>
+            </div>
         <tr th:each="post : ${posts}">
             <td th:text="${post.counter}"></td>
             <td><a type="button" class="btn btn-primary" th:href="'/' + ${post.id} + '/voteup'">Up!</a></td>
@@ -22,6 +31,7 @@
             <td><a th:href="${post.url}"><p th:text="${post.text}"></p></a></td>
             </tr>
         </table>
+        </div>
 
         <script src="/webjars/jquery/1.11.1/jquery.min.js"></script>
         <script src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>

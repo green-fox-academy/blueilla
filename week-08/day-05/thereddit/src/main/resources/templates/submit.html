@@ -3,19 +3,23 @@
     <head>
         <meta charset="UTF-8"/>
         <title>Submit new Post!</title>
+        <link rel="stylesheet" href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/webjars/bootstrap/3.3.7-1/css/bootstrap-theme.min.css" />
+
     </head>
     <body>
 
         <h1>Submit new Post</h1>
 
-        <form th:action="@{/submit}" method="post" th:object="${post}">
+        <form class="form-inline" th:action="@{/submit}" method="post" th:object="${post}">
             <label for="text">Add a Post here!</label>
-            <input type="text" id="text" th:field="${post.text}">
+            <input class="form-control" type="text" id="text" th:field="${post.text}">
             <label for="url">Add the URL here!</label>
-            <input type="text" id="url" th:field="${post.url}">
-            <input type="submit">
+            <input class="form-control" type="text" id="url" th:field="${post.url}">
+            <input class="btn btn-primary mb-2" type="submit">
         </form>
-
+        <script src="/webjars/jquery/1.11.1/jquery.min.js"></script>
+        <script src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
     </body>
 </html>
 
