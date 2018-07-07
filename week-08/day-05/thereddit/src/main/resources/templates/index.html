@@ -9,18 +9,16 @@
 
     </head>
     <body>
-        <div class="btn btn-default" href="#" role="button">
+        <div class="btn btn-default">
         <a href="/submit">Submit your post here!</a>
         </div>
-        <h1>
-            <em>Trending posts</em>
-        </h1>
+        <h1 class="text-center">Trending posts</h1>
         <br>
         <table class="table table-hover">
         <tr th:each="post : ${posts}">
             <td th:text="${post.counter}"></td>
-            <td><a type="button" class="btn btn-primary" th:href="${post.counter}">Up!</a></td>
-            <td><a type="button" class="btn btn-warning" th:href="${post.counter}">Down!</a></td>
+            <td><a type="button" class="btn btn-primary" th:href="'/' + ${post.id} + '/voteup'">Up!</a></td>
+            <td><a type="button" class="btn btn-warning" th:href="'/' + ${post.id} + '/votedown'">Down!</a></td>
             <td><a th:href="${post.url}"><p th:text="${post.text}"></p></a></td>
             </tr>
         </table>

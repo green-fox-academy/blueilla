@@ -1,7 +1,6 @@
 package com.greenfoxacademy.thereddit.controller;
 
 import com.greenfoxacademy.thereddit.model.Post;
-import com.greenfoxacademy.thereddit.repository.PostRepository;
 import com.greenfoxacademy.thereddit.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,14 +22,6 @@ public class PostController {
     return "index";
   }
 
-//  @GetMapping("/{id}/increment")
-//  public String incrementVote(@PathVariable(value="id") long id ) {
-//
-//    return "redirect:/";
-//  }
-//
-//  @PostMapping("/")
-//  public String voteForPost
 
   @GetMapping("/submit")
   public String renderSubmitPage(Model model) {
@@ -41,6 +32,20 @@ public class PostController {
   @PostMapping("/submit")
   public String submitNewPost(@ModelAttribute Post post) {
     postService.savePost(post);
+    return "redirect:/";
+  }
+
+  @GetMapping(value = "/{id}/voteup")
+  public String voteUp(@PathVariable(name = "id") Long id) {
+    postService.incrementCounterById(id);
+    postService.savePost(postService.findPostById(id));
+    return "redirect:/";
+  }
+
+  @GetMapping(value = "/{id}/votedown")
+  public String voteDown(@PathVariable(name = "id") Long id) {
+    postService.decrementCounterById(id);
+    postService.savePost(postService.findPostById(id));
     return "redirect:/";
   }
 }

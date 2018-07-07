@@ -21,7 +21,15 @@ public class Post {
   public Post(String text, String url) {
     this.text = text;
     this.url = url;
-    counter = 4;
+    counter = 0;
+  }
+
+  public void voteUp() {
+    counter++;
+  }
+
+  public void voteDown() {
+    counter--;
   }
 
   public long getId() {

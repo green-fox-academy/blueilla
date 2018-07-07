@@ -25,6 +25,12 @@ public class PostService {
     return postRepository.findAll();
   }
 
+  public void incrementCounterById(long id) {
+    findPostById(id).voteUp();
+  }
 
+  public void decrementCounterById(long id) {
+    findPostById(id).voteDown();
+  }
 
 }
