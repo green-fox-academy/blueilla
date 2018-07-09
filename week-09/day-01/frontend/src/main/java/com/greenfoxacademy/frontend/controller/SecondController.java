@@ -1,10 +1,9 @@
 package com.greenfoxacademy.frontend.controller;
 
-import com.greenfoxacademy.frontend.model.Doubling;
+import com.greenfoxacademy.frontend.model.*;
 import com.greenfoxacademy.frontend.model.Error;
-import com.greenfoxacademy.frontend.model.FrontendInterface;
-import com.greenfoxacademy.frontend.model.WelcomeMessage;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -33,5 +32,11 @@ public class SecondController {
       return new Error("Please provide a name!");
     }
     return new Error("Please provide a title!");
+  }
+
+  @GetMapping("/appenda/{appendable}")
+  public FrontendInterface appendA(@PathVariable (value = "appendable", required = false) String appendable) {
+    Append append = new Append(appendable);
+    return append;
   }
 }
