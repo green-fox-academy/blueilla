@@ -1,6 +1,6 @@
 package com.greenfoxacademy.frontend.model;
 
-public class Error implements FrontendInterface {
+public class Error implements ExerciseInterface {
 
   private String error;
 

@@ -1,6 +1,6 @@
 package com.greenfoxacademy.frontend.model;
 
-public class WelcomeMessage implements FrontendInterface {
+public class WelcomeMessage implements ExerciseInterface {
 
 
   private String welcome_message;

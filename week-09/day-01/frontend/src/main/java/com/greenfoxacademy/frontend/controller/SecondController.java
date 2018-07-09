@@ -12,7 +12,7 @@ public class SecondController {
 
 
   @GetMapping("/doubling")
-  public FrontendInterface doublingNumber(@RequestParam(value = "input", required = false) Integer input) {
+  public ExerciseInterface doublingNumber(@RequestParam(value = "input", required = false) Integer input) {
     if (input != null) {
       Doubling doubling = new Doubling(input, input * 2);
       return doubling;
@@ -23,7 +23,7 @@ public class SecondController {
   }
 
   @GetMapping("/greeter")
-  public FrontendInterface greeterFunction(@RequestParam(value = "name", required = false) String name,
+  public ExerciseInterface greeterFunction(@RequestParam(value = "name", required = false) String name,
                                            @RequestParam(value = "title", required = false) String title) {
     if (name != null && title != null) {
       WelcomeMessage welcomeMessage = new WelcomeMessage(name, title);
@@ -35,7 +35,7 @@ public class SecondController {
   }
 
   @GetMapping("/appenda/{appendable}")
-  public FrontendInterface appendA(@PathVariable (value = "appendable", required = false) String appendable) {
+  public ExerciseInterface appendA(@PathVariable (value = "appendable", required = false) String appendable) {
     Append append = new Append(appendable);
     return append;
   }

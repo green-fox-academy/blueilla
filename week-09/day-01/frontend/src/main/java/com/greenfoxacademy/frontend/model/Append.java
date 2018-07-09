@@ -1,6 +1,6 @@
 package com.greenfoxacademy.frontend.model;
 
-public class Append implements FrontendInterface{
+public class Append implements ExerciseInterface {
 
   private String appended;
 

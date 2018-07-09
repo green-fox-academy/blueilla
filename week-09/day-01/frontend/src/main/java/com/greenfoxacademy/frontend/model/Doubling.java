@@ -1,6 +1,6 @@
 package com.greenfoxacademy.frontend.model;
 
-public class Doubling implements FrontendInterface {
+public class Doubling implements ExerciseInterface {
 
   private int received;
   private int result;
