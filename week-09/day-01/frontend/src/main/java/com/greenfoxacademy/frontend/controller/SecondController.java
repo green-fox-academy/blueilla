@@ -1,11 +1,10 @@
 package com.greenfoxacademy.frontend.controller;
 
 import com.greenfoxacademy.frontend.model.*;
+import com.greenfoxacademy.frontend.model.Number;
 import com.greenfoxacademy.frontend.model.Error;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 
 @RestController
 public class SecondController {
@@ -35,8 +34,34 @@ public class SecondController {
   }
 
   @GetMapping("/appenda/{appendable}")
-  public ExerciseInterface appendA(@PathVariable (value = "appendable", required = false) String appendable) {
+  public ExerciseInterface appendA(@PathVariable(value = "appendable", required = false) String appendable) {
     Append append = new Append(appendable);
     return append;
+  }
+
+  @PostMapping("/dountil/{what}")
+  public ExerciseInterface doUntil(@PathVariable(value = "what") String what, @RequestBody Number number) {
+    if (what.equals("sum")) {
+      return new Result(numberAdder(number.getUntil()));
+
+    } else if (what.equals("factor")) {
+      return new Result(refactorio(number.getUntil()));
+    }
+    return new Error("Please provide a number!");
+  }
+
+  private static int numberAdder(int limit) {
+    if (limit == 1) {
+      return 1;
+    } else {
+      return limit + numberAdder(limit - 1);
+    }
+  }
+
+  private static int refactorio(int n) {
+    if (n == 0){
+      return 1;
+    }
+    return n * refactorio(n - 1);
   }
 }
