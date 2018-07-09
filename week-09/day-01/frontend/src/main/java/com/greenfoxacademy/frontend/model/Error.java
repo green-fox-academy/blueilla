@@ -2,9 +2,10 @@ package com.greenfoxacademy.frontend.model;
 
 public class Error implements FrontendInterface {
 
-  private String error = "Please provide an input!";
+  private String error;
 
   public Error() {
+    this("Please provide an input!");
   }
 
   public Error(String error) {
