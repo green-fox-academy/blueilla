@@ -27,10 +27,12 @@ public class SecondController {
     if (name != null && title != null) {
       WelcomeMessage welcomeMessage = new WelcomeMessage(name, title);
       return welcomeMessage;
-    } else if (name == null) {
+    } else if (name == null && title != null) {
       return new Error("Please provide a name!");
+    } else if (title == null && name != null) {
+      return new Error("Please provide a title!");
     }
-    return new Error("Please provide a title!");
+    return new Error("Please provide both!");
   }
 
   @GetMapping("/appenda/{appendable}")

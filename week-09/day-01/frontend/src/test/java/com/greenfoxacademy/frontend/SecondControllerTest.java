@@ -27,16 +27,6 @@ public class SecondControllerTest {
   @Autowired
   private MockMvc mockMvc;
 
-  // if an additional service layer is used
-  // - meaning not all logic is added to the controller and you have Autowired fields in it -
-  // then you have to mock out the service class like below
-  // {
-  //  "received": 15,
-  //  "result": 30
-  //}
-  //@MockBean
-  //private UserService userService;
-
   @Test
   public void doublingNumber_succesfull() throws Exception {
     mockMvc.perform(get("/doubling")
@@ -47,18 +37,6 @@ public class SecondControllerTest {
             .andExpect(jsonPath("$.received", is(5)))
             .andExpect(jsonPath("$.result", is(10) ));
   }
-
-//  @Test
-//  public void addNewUser_succesfull() throws Exception {
-//    mockMvc.perform(post("/users")
-//            .contentType(MediaType.APPLICATION_JSON)
-//            .content("{\"email\": \"name@example.com\", \"password\": \"12345\"}"))
-//            .andExpect(status().isOk())
-//            .andExpect(content().contentType(contentType))
-//            .andExpect(jsonPath("$.result", is("success")))
-//            .andExpect(jsonPath("$.message", is("User is added")));
-//  }
-
 
   @Test
   public void doublingNumber_succesfull2() throws Exception {
@@ -109,8 +87,41 @@ public class SecondControllerTest {
             .andExpect(jsonPath("$.appended", is("kutya") ));
   }
 
-//  @Test
-//  public void greeter_successful() throws Exception {
-//    mockMvc.perform(get("/greeter"))
-//  }
+  @Test
+  public void greeter_successful() throws Exception {
+    mockMvc.perform(get("/greeter")
+            .param("name", "Petike")
+            .param("title", "student")
+            .contentType(MediaType.APPLICATION_JSON))
+            .andExpect(status().isOk())
+            .andExpect(content().contentType(contentType))
+            .andExpect(jsonPath("$.welcome_message", is("Oh, hi there Petike, my dear student!")));
+  }
+
+  @Test
+  public void greeterErrorHandlingWithoutTitle_successful() throws Exception {
+    mockMvc.perform(get("/greeter?name=Peti")
+            .contentType(MediaType.APPLICATION_JSON))
+            .andExpect(status().isOk())
+            .andExpect(content().contentType(contentType))
+            .andExpect(jsonPath("$.error", is("Please provide a title!")));
+  }
+
+  @Test
+  public void greeterErrorHandlingWithoutAny_successful() throws Exception {
+    mockMvc.perform(get("/greeter")
+            .contentType(MediaType.APPLICATION_JSON))
+            .andExpect(status().isOk())
+            .andExpect(content().contentType(contentType))
+            .andExpect(jsonPath("$.error", is("Please provide both!")));
+  }
+
+  @Test
+  public void greeterErrorHandlingWithoutName_successful() throws Exception {
+    mockMvc.perform(get("/greeter?title=student")
+            .contentType(MediaType.APPLICATION_JSON))
+            .andExpect(status().isOk())
+            .andExpect(content().contentType(contentType))
+            .andExpect(jsonPath("$.error", is("Please provide a name!")));
+  }
 }
