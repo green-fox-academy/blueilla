@@ -18,4 +18,11 @@ public class GuardianRestController {
       return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Error());
     }
   }
+
+  @GetMapping("/yondu")
+  public ResponseEntity<?> yonduSpeedCalculator(@RequestParam(value = "distance") double distance,
+                                                @RequestParam(value = "time") double time) {
+    Yondu yondu = new Yondu(distance, time);
+    return ResponseEntity.status(HttpStatus.OK).body(yondu);
+  }
 }
