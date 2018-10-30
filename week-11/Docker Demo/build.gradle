@@ -7,13 +7,15 @@ buildscript {
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath ('se.transmode.gradle:gradle-docker:1.2')
     }
 }
 
 apply plugin: 'java'
-apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
+apply plugin: 'docker'
+
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
@@ -33,3 +35,5 @@ dependencies {
     runtime('mysql:mysql-connector-java')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
+
+

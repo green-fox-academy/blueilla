@@ -9,12 +9,9 @@ public class PrintArguments {
     }
 
     public static void printParams(String... text) {
-
         for (String i : text) {
             System.out.println(i);
 
-
         }
-
     }
 }
